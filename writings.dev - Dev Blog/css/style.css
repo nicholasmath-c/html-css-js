@@ -1,0 +1,237 @@
+/*------- Fonts --------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap');
+
+/*------- Variables -------*/
+
+:root{
+    --main-color: #FF7575; 
+    --secondary-color: #232830;
+    --secondary-color-divider: #4D4D4D;
+    --secondary-color-text: #909090;
+}
+
+/*------- Global Settings -------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--secondary-color);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto 50px auto;
+}
+
+.recursive-font{
+    font-family: 'Recursive', sans-serif;
+}
+
+.divider::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    opacity: 20%;
+    background-color: var(--secondary-color-divider);
+    margin: -10px;
+}
+
+/* -------- Custom Scrollbar -------- */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 20px;
+}
+
+/*------- 
+---------- Heading ----------
+-------*/
+
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.title{
+    user-select: none;
+    font-size: large;
+}
+
+.nav-bar a{
+    text-transform: lowercase;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.nav-bar a:hover{
+    color: var(--main-color);
+}
+
+.hero{
+    display: flex;
+    flex-flow: wrap column;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.hero .logo{
+    display: flex;
+    margin: 0 auto 30px auto;
+}
+
+.hero .logo svg{
+    display: inline-block;
+}
+
+.hero h1{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+.hero h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/*------- 
+---------- Category Listing ----------
+-------*/
+
+#category-listing{
+    display: flex;
+    position: relative;
+}
+
+#category-listing::after{
+    content: "";
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(-90deg, var(--secondary-color), rgba(0,0,0,0) 100%);
+    display: block;
+    pointer-events: none;
+}
+
+.left-buttons{
+    display: flex;
+    flex: 10%;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-icon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    width: 24px;
+    height: 24px;
+}
+
+.grid-icon-square{
+    background-color: var(--secondary-color-text);
+}
+
+.hamburger-icon{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 6px;
+    width: 24px;
+    height: 24px;
+}
+
+.hamburger-icon-rect{
+    background-color: var(--secondary-color-text);
+}
+
+.left-buttons a:hover .grid-icon-square, .left-buttons a:hover .hamburger-icon-rect{
+    background-color: var(--main-color);
+}
+
+.category-bar{
+    display: flex;
+    flex: 88%;
+    overflow: hidden;
+}
+
+.category-bar ul{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    overflow: auto;
+}
+
+.category-bar li{
+    margin-left: 2%;
+}
+
+.category-bar a{
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: 'Recursive', cursive;
+    font-style: italic;
+    text-align: center;
+    color: var(--secondary-color-text);
+}
+
+.category-bar a:hover{
+    color: var(--main-color);
+}
+
+.category-bar ::-webkit-scrollbar{
+    height: 5px;
+}
+
+.category-bar ::-webkit-scrollbar-thumb{
+    background-color: var(--secondary-color-text);
+}
+
+/*------- 
+---------- Responsive ----------
+-------*/
+
+@media (max-width: 1044px){
+    .container{
+        padding: 0 20px 50px 20px;
+    }
+}
