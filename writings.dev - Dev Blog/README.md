@@ -12,7 +12,7 @@ Estudo de blog responsivo a partir arquivo figma: https://bit.ly/3QuBAzv
 - Semantic HTML
 - Flexbox e Grid Layout
 - Media Queries para responsividade
-- HTML e CSS em todo o conteúdo
+- Apenas HTML e CSS em todo o conteúdo
 
 
 ## Screenshots
