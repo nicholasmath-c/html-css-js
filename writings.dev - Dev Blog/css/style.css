@@ -137,18 +137,7 @@ nav ul li{
 
 #category-listing{
     display: flex;
-    position: relative;
-}
-
-#category-listing::after{
-    content: "";
-    width: 10%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    background: linear-gradient(-90deg, var(--secondary-color), rgba(0,0,0,0) 100%);
-    display: block;
-    pointer-events: none;
+    margin-bottom: 80px;
 }
 
 .left-buttons{
@@ -190,6 +179,7 @@ nav ul li{
 
 .category-bar{
     display: flex;
+    position: relative;
     flex: 88%;
     overflow: hidden;
 }
@@ -225,6 +215,91 @@ nav ul li{
 .category-bar ::-webkit-scrollbar-thumb{
     background-color: var(--secondary-color-text);
 }
+
+.category-bar:after{
+    content: "";
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(-90deg, var(--secondary-color), rgba(0,0,0,0) 100%);
+    display: block;
+    pointer-events: none;
+}
+
+/*------- 
+---------- Main (Blog Area) ----------
+-------*/
+
+#blog-area{
+    /* border: solid 1px; */
+}
+
+.posts-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.posts-section a{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 350px;
+    color: #0F1217;
+    width: 100%;
+    padding: 20px;
+}
+
+.blog-post-img{
+    border-radius: 15px;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.blog-post-headline{
+    font-size: .95rem;
+}
+
+.blog-post-description{
+    font-size: 0.8rem;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.blog-post-footer{
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.blog-post-date::after{
+    content: ".";
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.blog-post-date, .blog-post-category{
+    display: inline;
+}
+
+.blog-post-img, .blog-post-headline, .blog-post-description{
+    margin-bottom: 10px;
+}
+
 
 /*------- 
 ---------- Responsive ----------
