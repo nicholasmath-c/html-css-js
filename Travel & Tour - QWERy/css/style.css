@@ -446,3 +446,136 @@ footer section
     color: var(--bg-color);
     transform: translateX(-4px);
 }
+
+.copyright p{
+    text-align: center;
+    padding: 20px;
+    color: #979797;
+    font-size: 15px;
+}
+
+@media (max-width: 1700px){
+    header{
+        padding: 18px 8%;
+    }
+
+    header.sticky{
+        padding: 7px 8%;
+    }
+
+    section{
+        padding: 50px 8% 40px;
+    }
+}
+
+@media (max-width: 1200px){
+    header{
+        padding: 18px 5%;
+    }
+
+    header.sticky{
+        padding: 7px 5%;
+    }
+
+    section{
+        padding: 45px 5% 35px;
+    }
+
+    :root{
+        --h1-font: 4.6rem;
+        --h2-font: 2.8rem;
+        --p-font: 15px;
+    }
+
+    .home{
+        height: 90vh;
+    }
+}
+
+@media (max-width: 1050px){
+    .feature-content{
+        gap: 1.5rem;
+    }
+    
+    .holiday{
+        gap: 3rem;
+    }
+
+    .culture{
+        gap: 3rem;
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 60px;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        transition: all .5s ease;
+    }
+
+    .navbar a{
+        display: block;
+        color: #979797;
+        padding: 0px 0px 40px;
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+
+    .navbar.open{
+        left: 0;
+    }
+}
+
+@media (max-width: 800px){
+    .holiday{
+        grid-template-columns: 1fr;
+    }
+
+    .tour-content{
+        grid-template-columns: 1fr;
+    }
+
+    .culture{
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    :root{
+        --h1-font: 3.5rem;
+        --h2-font: 2.1rem;
+    }
+
+    .home{
+        height: 85vh;
+    }
+}
+
+@media (max-width: 450px){
+    header{
+        padding: 12px 3%;
+    }
+
+    header.sticky{
+        padding: 7px 3%;
+    }
+
+    section{
+        padding: 60px 3% 50px;
+    }
+}
